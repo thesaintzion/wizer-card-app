@@ -1,0 +1,52 @@
+<div class="add-card-con">
+  <P>aDD CARD</P>
+  <form [formGroup]="cardForm" (ngSubmit)="handelAddCard()" class="form">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Card Number</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardNumber"
+        placeholder="Card number"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Card Holder</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardHoler"
+        placeholder="Card holder"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Expiry Date</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardExpire"
+        placeholder="Expiry Date"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>CVV number</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cardCVV"
+        placeholder="CVV number"
+        required
+      />
+    </mat-form-field>
+
+    <button tabindex="-1" mat-raised-button>ADD CARD</button>
+
+    <pre>{{ cardForm.value | json }}</pre>
+  </form>
+</div>
